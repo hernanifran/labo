@@ -22,9 +22,9 @@ require("lightgbm")
 
 #Parametros del script
 PARAM  <- list()
-PARAM$experimento  <- "HB8010"
+PARAM$experimento  <- "HB8010_mod3y4"
 
-PARAM$exp_input  <- c( "ZZ7990-01", "ZZ7990-66", "ZZ7990-53", "ZZ7990-52" )  # el inpput deben ser semillerios
+PARAM$exp_input  <- c( "ZZ7990_3", "ZZ7990_4" )  # el inpput deben ser semillerios
 
 PARAM$kaggle$envios_desde  <-  9500L
 PARAM$kaggle$envios_hasta  <- 11500L
@@ -329,4 +329,4 @@ system( "sleep 10  &&
         export ZONE=$(curl -X GET http://metadata.google.internal/computeMetadata/v1/instance/zone -H 'Metadata-Flavor: Google') &&
         gcloud --quiet compute instances delete $NAME --zone=$ZONE",
         wait= FALSE )
- 
+ }
